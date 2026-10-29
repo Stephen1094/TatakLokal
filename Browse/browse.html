@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Businesses | TatakLokal</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="browse.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logojpg.jpg" alt="TatakLokal Logo" onerror="this.onerror=null; this.src='../Pictures/logojpg.jpg'">
+                <div class="logo-text">
+                    <h3>TatakLokal</h3>
+                    <h5>OLONGAPO</h5>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="browse.html" class="active">Browse</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="../Dashboard/dashboard.html" class="btn-dashboard">Dashboard</a>
+                <a href="../AddYourBusiness/add-business.html" class="btn-add-business">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <span>Add business</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+        <!-- Title & Subtitle -->
+        <section class="page-header">
+            <h1 class="page-title">Browse Olongapo businesses</h1>
+            <p class="page-subtitle">Everything listed here is inside the city &mdash; filter by category, barangay or delivery.</p>
+            
+            <!-- Search Bar -->
+            <form class="search-bar" onsubmit="event.preventDefault();">
+                <div class="search-input-wrap">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search by name, category or barangay..." id="searchInput">
+                </div>
+                <button type="submit" class="btn-search">Search</button>
+            </form>
+        </section>
+
+        <!-- Two-Column Layout -->
+        <div class="layout-grid">
+            
+            <!-- Left Sidebar: Filters -->
+            <aside class="sidebar-filters">
+                <div class="filter-header">
+                    <h3>FILTERS</h3>
+                    <button type="button" class="btn-clear" id="clearFilters">Clear all</button>
+                </div>
+
+                <!-- Category Section -->
+                <div class="filter-group">
+                    <label class="group-title">CATEGORY</label>
+                    <div class="category-list">
+                        <label class="filter-option" data-cat="food">
+                            <input type="checkbox" name="category" value="food">
+                            <span class="custom-radio"></span>
+                            <span class="option-label">Food &amp; Beverages</span>
+                        </label>
+                        <label class="filter-option" data-cat="crafts">
+                            <input type="checkbox" name="category" value="crafts">
+                            <span class="custom-radio"></span>
+                            <span class="option-label">Handmade &amp; Crafts</span>
+                        </label>
+                        <label class="filter-option" data-cat="fashion">
+                            <input type="checkbox" name="category" value="fashion">
+                            <span class="custom-radio"></span>
+                            <span class="option-label">Fashion &amp; Accessories</span>
+                        </label>
+                        <label class="filter-option" data-cat="health">
+                            <input type="checkbox" name="category" value="health">
+                            <span class="custom-radio"></span>
+                            <span class="option-label">Health &amp; Wellness</span>
+                        </label>
+                        <label class="filter-option" data-cat="home">
+                            <input type="checkbox" name="category" value="home">
+                            <span class="custom-radio"></span>
+                            <span class="option-label">Home &amp; Living</span>
+                        </label>
+                        <label class="filter-option" data-cat="services">
+                            <input type="checkbox" name="category" value="services">
+                            <span class="custom-radio"></span>
+                            <span class="option-label">Services</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Barangay Dropdown -->
+                <div class="filter-group">
+                    <label class="group-title" for="barangaySelect">BARANGAY</label>
+                    <div class="select-wrapper">
+                        <select id="barangaySelect">
+                            <option value="">Anywhere in Olongapo</option>
+                            <option value="asinan">Brgy. Asinan</option>
+                            <option value="banicain">Brgy. Banicain</option>
+                            <option value="barretto">Brgy. Barretto</option>
+                            <option value="east-bajac-bajac">Brgy. East Bajac-Bajac</option>
+                            <option value="east-tapinac">Brgy. East Tapinac</option>
+                            <option value="gordon-heights">Brgy. Gordon Heights</option>
+                            <option value="kalaklan">Brgy. Kalaklan</option>
+                            <option value="kalalake">Brgy. Kalalake</option>
+                            <option value="mabayuan">Brgy. Mabayuan</option>
+                            <option value="new-cabalan">Brgy. New Cabalan</option>
+                            <option value="new-ilalim">Brgy. New Ilalim</option>
+                            <option value="new-kababae">Brgy. New Kababae</option>
+                            <option value="new-kalalake">Brgy. New Kalalake</option>
+                            <option value="old-cabalan">Brgy. Old Cabalan</option>
+                            <option value="pag-asa">Brgy. Pag-asa</option>
+                            <option value="sta-rita">Brgy. Sta. Rita</option>
+                            <option value="west-bajac-bajac">Brgy. West Bajac-Bajac</option>
+                            <option value="west-tapinac">Brgy. West Tapinac</option>
+                        </select>
+                        <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Sort By Dropdown -->
+                <div class="filter-group">
+                    <label class="group-title" for="sortSelect">SORT BY</label>
+                    <div class="select-wrapper">
+                        <select id="sortSelect">
+                            <option value="top-rated">Top rated</option>
+                            <option value="most-reviewed">Most reviewed</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                        <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Delivery Filter Pill -->
+                <div class="delivery-toggle-box">
+                    <label class="toggle-option">
+                        <input type="checkbox" id="deliveryOnly">
+                        <span class="custom-radio"></span>
+                        <span class="delivery-text">Delivery / online only</span>
+                    </label>
+                </div>
+            </aside>
+
+            <!-- Right Content: Business Cards Grid -->
+            <section class="results-section">
+                <div class="results-header">
+                    <span class="results-count">7 places found</span>
+                </div>
+
+                <div class="business-grid" id="businessGrid">
+                    
+                    <!-- Card 1 -->
+                    <article class="business-card" data-category="crafts" data-barangay="east-tapinac" data-delivery="true">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=600&q=80" alt="Likha Handmade Studio">
+                            <span class="category-badge">HANDMADE &amp; CRAFTS</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Likha Handmade Studio</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Brgy. East Tapinac &middot; Olongapo</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.9</span>
+                                    <span class="rating-count">(58)</span>
+                                </div>
+                                <span class="price-level">₱₱</span>
+                            </div>
+                            <div class="badge-delivery">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                                <span>Delivery / online</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article class="business-card" data-category="food" data-barangay="asinan" data-delivery="true">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Bino's Bakeshop">
+                            <span class="category-badge">FOOD &amp; BEVERAGES</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Bino's Bakeshop</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Brgy. Asinan &middot; Olongapo</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.8</span>
+                                    <span class="rating-count">(126)</span>
+                                </div>
+                                <span class="price-level">₱</span>
+                            </div>
+                            <div class="badge-delivery">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                                <span>Delivery / online</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article class="business-card" data-category="food" data-barangay="kalaklan" data-delivery="true">
+                        <a href="/Business-viewpage/Business-viewpage.html">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Sagip Coffee Roasters">
+                            <span class="category-badge">FOOD &amp; BEVERAGES</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Weirdo's Cafe</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Olongapo City, Brgy. East Tapinac</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.7</span>
+                                    <span class="rating-count">(92)</span>
+                                </div>
+                                <span class="price-level">₱₱</span>
+                            </div>
+                            <div class="badge-delivery">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                                <span>Delivery / online</span>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+
+                    <!-- Card 4 -->
+                    <article class="business-card" data-category="home" data-barangay="barretto" data-delivery="true">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80" alt="Casa Zambales">
+                            <span class="category-badge">HOME &amp; LIVING</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Casa Zambales</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Brgy. Barretto &middot; Olongapo</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.7</span>
+                                    <span class="rating-count">(41)</span>
+                                </div>
+                                <span class="price-level">₱₱₱</span>
+                            </div>
+                            <div class="badge-delivery">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="1" y="3" width="15" height="13"></rect>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 8"></polygon>
+                                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                </svg>
+                                <span>Delivery / online</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 -->
+                    <article class="business-card" data-category="health" data-barangay="kalaklan" data-delivery="false">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=600&q=80" alt="Kalaklan Fit Studio">
+                            <span class="category-badge">HEALTH &amp; WELLNESS</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Kalaklan Fit Studio</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Brgy. Kalaklan &middot; Olongapo</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.6</span>
+                                    <span class="rating-count">(74)</span>
+                                </div>
+                                <span class="price-level">₱₱</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 -->
+                    <article class="business-card" data-category="services" data-barangay="west-bajac-bajac" data-delivery="false">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="FixIt Olongapo">
+                            <span class="category-badge">SERVICES</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">FixIt Olongapo</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Brgy. West Bajac-Bajac &middot; Olongapo</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.6</span>
+                                    <span class="rating-count">(88)</span>
+                                </div>
+                                <span class="price-level">₱₱</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Card 7 -->
+                    <article class="business-card" data-category="fashion" data-barangay="new-kalalake" data-delivery="false">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Ukay Central">
+                            <span class="category-badge">FASHION &amp; ACCESSORIES</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Ukay Central</h3>
+                            <div class="card-location">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Brgy. New Kalalake &middot; Olongapo</span>
+                            </div>
+                            <div class="card-meta">
+                                <div class="rating">
+                                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                                    <span class="rating-score">4.5</span>
+                                    <span class="rating-count">(143)</span>
+                                </div>
+                                <span class="price-level">₱</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Interactive Category Tap & Filter Animation Script -->
+    <script src="browse.js"></script>
+</body>
+</html>

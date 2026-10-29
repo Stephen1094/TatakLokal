@@ -1,0 +1,136 @@
+:root {
+    --green: #166d3f;
+    --green-dark: #11582f;
+    --green-soft: #eef5f0;
+    --gold: #946200;
+    --gold-bg: #fdf3d8;
+    --ink: #1f2a24;
+    --muted: #5f6f66;
+    --hint: #6b7a72;
+    --border: #e2e7e4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    background: #fff;
+    color: var(--ink);
+    padding: 18px 14px 40px;
+  }
+  .page { max-width: 640px; margin: 0 auto; }
+
+  /* Header */
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--gold-bg); color: var(--gold);
+    font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    padding: 5px 11px; border-radius: 999px;
+  }
+  .badge svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  h1 { color: var(--green); font-size: 34px; font-weight: 800; letter-spacing: -0.02em; margin: 8px 0 8px; }
+  .lead { color: var(--green); font-size: 13px; line-height: 1.6; margin-bottom: 18px; opacity: .9; }
+
+  /* Cards */
+  .card {
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 20px 18px 22px;
+    margin-bottom: 18px;
+    background: #fff;
+    box-shadow: 0 6px 22px rgba(20, 60, 40, .07);
+  }
+  .card h2 {
+    font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px;
+  }
+  .card .desc { font-size: 12.5px; color: var(--muted); margin: -6px 0 14px; }
+
+  /* Fields */
+  .grid { display: grid; gap: 14px; margin-bottom: 14px; }
+  .grid.two { grid-template-columns: 1fr 1fr; }
+  .grid.three { grid-template-columns: 1fr 1fr 1fr; }
+  .field { margin-bottom: 14px; }
+  .grid .field { margin-bottom: 0; }
+  .card > .field:last-child, .card > .grid:last-child { margin-bottom: 0; }
+
+  label { display: block; font-size: 12.5px; font-weight: 500; color: var(--green); margin-bottom: 6px; }
+  input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+    width: 100%;
+    font: 400 12.5px "Plus Jakarta Sans", sans-serif; color: var(--ink);
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 0 12px; height: 36px; outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  textarea { height: 86px; padding: 10px 12px; resize: vertical; line-height: 1.5; }
+  select {
+    appearance: none; -webkit-appearance: none; cursor: pointer;
+    padding-right: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235f6f66' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center;
+  }
+  select:invalid { color: #7c8a83; }
+  input::placeholder, textarea::placeholder { color: #8a9890; }
+  input:focus, select:focus, textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(22,109,63,.12); }
+  .hint { font-size: 10.5px; color: var(--hint); margin-top: 6px; }
+
+  /* Delivery toggle */
+  .toggle {
+    display: flex; align-items: center; gap: 10px;
+    background: #f3f6f4; border-radius: 12px;
+    padding: 12px 14px; margin-top: 14px;
+    cursor: pointer; font-size: 12.5px; font-weight: 500; color: var(--green);
+  }
+  .toggle input { position: absolute; opacity: 0; pointer-events: none; }
+  .toggle .dot {
+    width: 15px; height: 15px; border-radius: 50%;
+    border: 1.5px solid #9bb0a4; background: #fff; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .15s;
+  }
+  .toggle input:checked + .dot { background: var(--green); border-color: var(--green); }
+  .toggle input:checked + .dot::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: #fff; }
+  .toggle input:focus-visible + .dot { box-shadow: 0 0 0 3px rgba(22,109,63,.2); }
+
+  /* Photos */
+  .add-photos {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 9px 14px; font: 600 12.5px "Plus Jakarta Sans", sans-serif; color: var(--green);
+    cursor: pointer; transition: background .15s;
+  }
+  .add-photos:hover { background: var(--green-soft); }
+  .add-photos svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .add-photos:disabled { opacity: .5; cursor: not-allowed; }
+  .previews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+  .previews:empty { display: none; }
+  .thumb { position: relative; aspect-ratio: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .thumb .cover-tag {
+    position: absolute; left: 6px; bottom: 6px;
+    background: var(--green); color: #fff; font-size: 9.5px; font-weight: 700;
+    padding: 2px 7px; border-radius: 999px; letter-spacing: .04em;
+  }
+  .thumb button {
+    position: absolute; top: 6px; right: 6px;
+    width: 22px; height: 22px; border-radius: 50%; border: 0;
+    background: rgba(0,0,0,.6); color: #fff; font-size: 14px; line-height: 1; cursor: pointer;
+  }
+
+  /* Submit */
+  .submit-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .publish {
+    background: var(--green); color: #fff; border: 0; border-radius: 10px;
+    height: 42px; padding: 0 20px;
+    font: 600 13px "Plus Jakarta Sans", sans-serif;
+    cursor: pointer; transition: background .15s, opacity .15s;
+  }
+  .publish:hover { background: var(--green-dark); }
+  .publish:disabled { opacity: .6; cursor: not-allowed; }
+  .submit-note { font-size: 11px; color: var(--muted); flex: 1; min-width: 180px; }
+
+  .message { margin-top: 14px; font-size: 13px; display: none; }
+  .message.error { display: block; color: #c0392b; }
+  .message.success { display: block; color: var(--green); font-weight: 600; }
+
+  @media (max-width: 400px) {
+    .grid.three { grid-template-columns: 1fr; }
+  }

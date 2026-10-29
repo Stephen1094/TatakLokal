@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TatakLokal</title>
+    <link rel="stylesheet" href="Design.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header>
+      <div class="logo">
+        <img src="Pictures/logojpg.jpg" alt="logo" />
+        <div class="logo-text">
+          <h3>TatakLocal</h3>
+          <h5>OLONGAPO</h5>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html" class="home-btn">Home</a>
+        <a href="Browse/browse.html" class="browse-btn">Browse</a>
+        
+      </nav>
+      <a href="auth/login.html" class="signin-btn">Sign In</a>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero / Banner Section -->
+      <section class="hero">
+        <!-- Location Tag -->
+        <p class="location">
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 2 15 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_8_303)">
+              <path
+                d="M13.3333 10.0003C13.3333 11.8413 11.8409 13.3337 9.99999 13.3337C8.15904 13.3337 6.66666 11.8413 6.66666 10.0003C6.66666 8.15938 8.15904 6.66699 9.99999 6.66699C11.8409 6.66699 13.3333 8.15938 13.3333 10.0003Z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M10 1.66699V3.33366"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M10 16.667V18.3337"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M4.10834 4.1084L5.28334 5.2834"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M14.7167 14.7168L15.8917 15.8918"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M1.66666 10H3.33332"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M16.6667 10H18.3333"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M5.28334 14.7168L4.10834 15.8918"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M15.8917 4.1084L14.7167 5.2834"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_8_303">
+                <rect width="30" height="30" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          OLONGAPO CITY · ZAMBALES
+        </p>
+
+        <!-- Main Heading -->
+        <h1>
+          Discover the <span class="highlight">local</span><br />businesses of
+          Olongapo.
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="subtitle">
+          Bakeries, ukay-ukay, crafts and services around the city — search by
+          name, category or barangay. No account needed to browse.
+        </p>
+
+        <!-- Search Bar -->
+        <form class="search-box" action="Browse/browse.html">
+          <input
+            type="text"
+            placeholder="Search a shop, service or barangay..."
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <!-- Popular Searches -->
+        <div class="popular">
+          <span>Popular:</span>
+          <a href="Browse/browse.html">Store</a>
+          <a href="Browse/browse.html">Restaurant</a>
+          <a href="Browse/browse.html">Coffee shop</a>
+          <a href="Browse/browse.html">etc...</a>
+        </div>
+
+        <!-- Statistics Box -->
+        <div class="stats-box">
+          <div class="stat-item">
+            <h3>17</h3>
+            <p>BARANGAYS COVERED</p>
+          </div>
+          <div class="line"></div>
+          <div class="stat-item">
+            <h3>6</h3>
+            <p>BUSINESS CATEGORIES</p>
+          </div>
+          <div class="line"></div>
+          <div class="stat-item">
+            <h3>Free</h3>
+            <p>TO LIST YOUR SHOP</p>
+          </div>
+        </div>
+      </section>
+      <!-- =========================================
+             1. BROWSE BY CATEGORY
+             ========================================= -->
+      <section class="categories-section">
+        <div class="section-header">
+          <h2>Browse by category</h2>
+          <p>Six buckets that cover most of what the city offers.</p>
+        </div>
+
+        <div class="categories-grid">
+          <a href="Browse/browse.html?category=food" class="category-item">
+            <div class="category-icon">
+              <svg
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="72" rx="36" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="71"
+                  height="71"
+                  rx="35.5"
+                  stroke="#126B3E"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M40.6667 24.333L37.9833 27.0163C37.342 27.6706 36.9828 28.5502 36.9828 29.4663C36.9828 30.3825 37.342 31.2621 37.9833 31.9163L40.0833 34.0163C40.7376 34.6576 41.6172 35.0168 42.5333 35.0168C43.4495 35.0168 44.3291 34.6576 44.9833 34.0163L47.6667 31.333"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M39.5 39.4996L25.85 25.8496C25.3843 26.3058 25.0144 26.8504 24.7619 27.4514C24.5094 28.0524 24.3793 28.6977 24.3793 29.3496C24.3793 30.0015 24.5094 30.6468 24.7619 31.2478C25.0144 31.8488 25.3843 32.3934 25.85 32.8496L34.3667 41.3663C35.1833 42.1829 36.7 42.1829 37.6333 41.3663L39.5 39.4996ZM39.5 39.4996L47.6667 47.6663"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M24.45 47.433L31.9167 40.083"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M44.1667 27.833L36 35.9997"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+              </svg>
+            </div>
+            <h4>Food & Beverages</h4>
+            <p>Bakeries, cafés & carinderia</p>
+          </a>
+
+          <a href="Browse/browse.html?category=crafts" class="category-item">
+            <div class="category-icon">
+              <svg
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="72" rx="36" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="71"
+                  height="71"
+                  rx="35.5"
+                  stroke="#126B3E"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M33.5932 40.0833C33.489 39.6795 33.2786 39.3111 32.9837 39.0162C32.6889 38.7214 32.3204 38.511 31.9167 38.4068L24.7592 36.5611C24.6371 36.5265 24.5296 36.4529 24.453 36.3517C24.3765 36.2504 24.3351 36.1269 24.3351 36C24.3351 35.873 24.3765 35.7496 24.453 35.6483C24.5296 35.547 24.6371 35.4735 24.7592 35.4388L31.9167 33.592C32.3203 33.4879 32.6886 33.2776 32.9835 32.983C33.2783 32.6884 33.4888 32.3202 33.5932 31.9166L35.4388 24.7591C35.4731 24.6365 35.5466 24.5285 35.648 24.4516C35.7495 24.3747 35.8733 24.333 36.0006 24.333C36.1279 24.333 36.2517 24.3747 36.3531 24.4516C36.4546 24.5285 36.528 24.6365 36.5623 24.7591L38.4068 31.9166C38.511 32.3204 38.7214 32.6888 39.0163 32.9837C39.3111 33.2785 39.6796 33.489 40.0833 33.5931L47.2408 35.4376C47.3639 35.4716 47.4725 35.545 47.5498 35.6466C47.6272 35.7481 47.6691 35.8723 47.6691 36C47.6691 36.1276 47.6272 36.2518 47.5498 36.3534C47.4725 36.455 47.3639 36.5283 47.2408 36.5623L40.0833 38.4068C39.6796 38.511 39.3111 38.7214 39.0163 39.0162C38.7214 39.3111 38.511 39.6795 38.4068 40.0833L36.5612 47.2408C36.5269 47.3634 36.4534 47.4714 36.352 47.5483C36.2505 47.6253 36.1267 47.6669 35.9994 47.6669C35.8721 47.6669 35.7483 47.6253 35.6469 47.5483C35.5454 47.4714 35.472 47.3634 35.4377 47.2408L33.5932 40.0833Z"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M45.3333 25.5V30.1667"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M47.6667 27.833H43"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M26.6667 41.833V44.1663"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M27.8333 43H25.5"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+              </svg>
+            </div>
+            <h4>Handmade & Crafts</h4>
+            <p>Souvenirs & local crafts</p>
+          </a>
+
+          <a href="Browse/browse.html?category=fashion" class="category-item">
+            <div class="category-icon">
+              <svg
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="72" rx="36" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="71"
+                  height="71"
+                  rx="35.5"
+                  stroke="#126B3E"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M45.7767 26.0363L40.6667 24.333C40.6667 25.5707 40.175 26.7577 39.2998 27.6328C38.4247 28.508 37.2377 28.9997 36 28.9997C34.7623 28.9997 33.5753 28.508 32.7002 27.6328C31.825 26.7577 31.3333 25.5707 31.3333 24.333L26.2233 26.0363C25.6953 26.2123 25.2475 26.5712 24.9608 27.0482C24.6742 27.5253 24.5675 28.0892 24.66 28.638L25.3367 32.6863C25.3811 32.9604 25.5218 33.2096 25.7335 33.3893C25.9452 33.5689 26.214 33.6671 26.4917 33.6663H29V45.333C29 46.6163 30.05 47.6663 31.3333 47.6663H40.6667C41.2855 47.6663 41.879 47.4205 42.3166 46.9829C42.7542 46.5453 43 45.9518 43 45.333V33.6663H45.5083C45.786 33.6671 46.0548 33.5689 46.2665 33.3893C46.4782 33.2096 46.6189 32.9604 46.6633 32.6863L47.34 28.638C47.4325 28.0892 47.3258 27.5253 47.0392 27.0482C46.7525 26.5712 46.3047 26.2123 45.7767 26.0363Z"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+              </svg>
+            </div>
+            <h4>Fashion & Accessories</h4>
+            <p>Ukay-ukay, shoes & bags</p>
+          </a>
+
+          <a href="Browse/browse.html?category=services" class="category-item">
+            <div class="category-icon">
+              <svg
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="72" height="72" rx="36" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="71"
+                  height="71"
+                  rx="35.5"
+                  stroke="#126B3E"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M39.15 29.35C38.9362 29.5681 38.8165 29.8613 38.8165 30.1667C38.8165 30.4721 38.9362 30.7653 39.15 30.9834L41.0167 32.85C41.2347 33.0638 41.528 33.1835 41.8333 33.1835C42.1387 33.1835 42.4319 33.0638 42.65 32.85L47.0483 28.4517C47.635 29.7481 47.8126 31.1925 47.5575 32.5924C47.3025 33.9922 46.6268 35.2812 45.6207 36.2873C44.6145 37.2935 43.3256 37.9692 41.9257 38.2242C40.5258 38.4793 39.0814 38.3017 37.785 37.715L29.7233 45.7767C29.2592 46.2408 28.6297 46.5016 27.9733 46.5016C27.317 46.5016 26.6875 46.2408 26.2233 45.7767C25.7592 45.3126 25.4985 44.6831 25.4985 44.0267C25.4985 43.3703 25.7592 42.7408 26.2233 42.2767L34.285 34.215C33.6984 32.9186 33.5207 31.4742 33.7758 30.0743C34.0309 28.6745 34.7065 27.3855 35.7127 26.3794C36.7188 25.3732 38.0078 24.6975 39.4077 24.4425C40.8076 24.1874 42.2519 24.365 43.5483 24.9517L39.1617 29.3384L39.15 29.35Z"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+              </svg>
+            </div>
+            <h4>Services</h4>
+            <p>Repairs, printing & laundry</p>
+          </a>
+
+          <a href="Browse/browse.html?category=home" class="category-item">
+            <div class="category-icon">
+              <svg
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="71.99" height="71.99" rx="35.995" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="70.99"
+                  height="70.99"
+                  rx="35.495"
+                  stroke="#126B3E"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M31.3233 24.3232H40.6566L45.3233 35.9899H26.6566L31.3233 24.3232Z"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M35.99 35.9902V42.9897"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M31.3233 47.6565V45.3234C31.3233 44.0401 32.3732 42.9902 33.6565 42.9902H38.3228C38.9415 42.9902 39.535 43.236 39.9725 43.6736C40.4101 44.1111 40.6559 44.7046 40.6559 45.3234V47.6565H31.3233Z"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+              </svg>
+            </div>
+            <h4>Home & Living</h4>
+            <p>Furniture & houseware</p>
+          </a>
+
+          <a href="Browse/browse.html?category=wellness" class="category-item">
+            <div class="category-icon">
+              <svg
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="71.99" height="71.99" rx="35.995" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="70.99"
+                  height="70.99"
+                  rx="35.495"
+                  stroke="#126B3E"
+                  stroke-opacity="0.1"
+                />
+                <path
+                  d="M44.1566 38.3236C45.895 36.6202 47.6566 34.5786 47.6566 31.9069C47.6566 30.2051 46.9806 28.573 45.7772 27.3696C44.5739 26.1663 42.9418 25.4902 41.24 25.4902C39.1866 25.4902 37.74 26.0736 35.99 27.8236C34.24 26.0736 32.7933 25.4902 30.74 25.4902C29.0382 25.4902 27.4061 26.1663 26.2027 27.3696C24.9993 28.573 24.3233 30.2051 24.3233 31.9069C24.3233 34.5902 26.0733 36.6319 27.8233 38.3236L35.99 46.4902L44.1566 38.3236Z"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+                <path
+                  d="M25.7466 35.9906H33.0733L33.6566 34.8239L35.99 40.0739L38.3233 31.9072L40.0733 35.9906H46.2216"
+                  stroke-width="2.1"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#126B3E"
+                />
+              </svg>
+            </div>
+            <h4>Health & Wellness</h4>
+            <p>Gyms, clinics & salons</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- =========================================
+             2. FEATURED IN OLONGAPO (BUSINESS CARDS)
+             ========================================= -->
+      <section class="featured-section">
+        <div class="featured-header">
+          <div>
+            <h2>Featured in Olongapo</h2>
+            <p>Well-loved local spots, hand-picked for this week.</p>
+          </div>
+          <a href="Browse/browse.html" class="see-all-link">See all &rarr;</a>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <div class="business-card">
+            <div class="card-image-box">
+              <span class="category-badge">HANDMADE & CRAFTS</span>
+              <img
+                src="https://images.unsplash.com/photo-1590736969955-71cc94801759?w=600"
+                alt="Likha Handmade Studio"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Likha Handmade Studio</h3>
+              <p class="card-location">📍 Brgy. East Tapinac · Olongapo</p>
+              <div class="card-meta">
+                <span class="rating">⭐ 4.9 <small>(58)</small></span>
+                <span class="price">₱₱</span>
+              </div>
+              <span class="delivery-badge">🛵 Delivery / online</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="business-card">
+            <div class="card-image-box">
+              <span class="category-badge">FOOD & BEVERAGES</span>
+              <img
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600"
+                alt="Bino's Bakeshop"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Bino's Bakeshop</h3>
+              <p class="card-location">📍 Brgy. Asinan · Olongapo</p>
+              <div class="card-meta">
+                <span class="rating">⭐ 4.8 <small>(125)</small></span>
+                <span class="price">₱</span>
+              </div>
+              <span class="delivery-badge">🛵 Delivery / online</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="business-card">
+            <div class="card-image-box">
+              <span class="category-badge">FOOD & BEVERAGES</span>
+              <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600"
+                alt="Sagip Coffee Roasters"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Sagip Coffee Roasters</h3>
+              <p class="card-location">📍 Brgy. Kalaklan · Olongapo</p>
+              <div class="card-meta">
+                <span class="rating">⭐ 4.7 <small>(92)</small></span>
+                <span class="price">₱₱</span>
+              </div>
+              <span class="delivery-badge">🛵 Delivery / online</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="business-card">
+            <div class="card-image-box">
+              <span class="category-badge">HOME & LIVING</span>
+              <img
+                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600"
+                alt="Casa Zambales"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Casa Zambales</h3>
+              <p class="card-location">📍 Brgy. Barretto · Olongapo</p>
+              <div class="card-meta">
+                <span class="rating">⭐ 4.7 <small>(41)</small></span>
+                <span class="price">₱₱₱</span>
+              </div>
+              <span class="delivery-badge">🛵 Delivery / online</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="business-card">
+            <div class="card-image-box">
+              <span class="category-badge">HEALTH & WELLNESS</span>
+              <img
+                src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600"
+                alt="Kalaklan Fit Studio"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Kalaklan Fit Studio</h3>
+              <p class="card-location">📍 Brgy. Kalaklan · Olongapo</p>
+              <div class="card-meta">
+                <span class="rating">⭐ 4.8 <small>(74)</small></span>
+                <span class="price">₱₱</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="business-card">
+            <div class="card-image-box">
+              <span class="category-badge">FASHION & ACCESSORIES</span>
+              <img
+                src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600"
+                alt="Ukay Central"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Ukay Central</h3>
+              <p class="card-location">📍 Brgy. New Kalalake · Olongapo</p>
+              <div class="card-meta">
+                <span class="rating">⭐ 4.6 <small>(143)</small></span>
+                <span class="price">₱</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             3. PUT YOUR SHOP ON THE MAP (BANNER)
+             ========================================= -->
+      <section class="cta-section">
+        <div class="cta-box">
+          <div class="cta-text">
+            <span class="cta-tag"
+              ><svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_8_287)">
+                  <path
+                    d="M1.16666 4.08366L3.73916 1.51116C3.84769 1.40198 3.97676 1.31536 4.11892 1.25629C4.26109 1.19722 4.41354 1.16687 4.56749 1.16699H9.43249C9.58644 1.16687 9.73889 1.19722 9.88105 1.25629C10.0232 1.31536 10.1523 1.40198 10.2608 1.51116L12.8333 4.08366"
+                    stroke-width="1.16667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FDF0C8"
+                  />
+                  <path
+                    d="M2.33334 7V11.6667C2.33334 11.9761 2.45626 12.2728 2.67505 12.4916C2.89384 12.7104 3.19059 12.8333 3.50001 12.8333H10.5C10.8094 12.8333 11.1062 12.7104 11.325 12.4916C11.5438 12.2728 11.6667 11.9761 11.6667 11.6667V7"
+                    stroke-width="1.16667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FDF0C8"
+                  />
+                  <path
+                    d="M8.75 12.833V10.4997C8.75 10.1903 8.62708 9.89351 8.40829 9.67472C8.1895 9.45592 7.89275 9.33301 7.58333 9.33301H6.41667C6.10725 9.33301 5.8105 9.45592 5.59171 9.67472C5.37292 9.89351 5.25 10.1903 5.25 10.4997V12.833"
+                    stroke-width="1.16667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FDF0C8"
+                  />
+                  <path
+                    d="M1.16666 4.08301H12.8333"
+                    stroke-width="1.16667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FDF0C8"
+                  />
+                  <path
+                    d="M12.8333 4.08301V5.83301C12.8333 6.14243 12.7104 6.43917 12.4916 6.65797C12.2728 6.87676 11.9761 6.99967 11.6667 6.99967C11.3258 6.98092 11.0003 6.85194 10.7392 6.63217C10.6696 6.58188 10.5859 6.5548 10.5 6.5548C10.4141 6.5548 10.3304 6.58188 10.2608 6.63217C9.99965 6.85194 9.67414 6.98092 9.33332 6.99967C8.9925 6.98092 8.667 6.85194 8.40582 6.63217C8.33622 6.58188 8.25253 6.5548 8.16666 6.5548C8.08078 6.5548 7.99709 6.58188 7.92749 6.63217C7.66631 6.85194 7.34081 6.98092 6.99999 6.99967C6.65917 6.98092 6.33367 6.85194 6.07249 6.63217C6.00289 6.58188 5.9192 6.5548 5.83332 6.5548C5.74745 6.5548 5.66376 6.58188 5.59416 6.63217C5.33298 6.85194 5.00748 6.98092 4.66666 6.99967C4.32584 6.98092 4.00033 6.85194 3.73916 6.63217C3.66955 6.58188 3.58586 6.5548 3.49999 6.5548C3.41411 6.5548 3.33043 6.58188 3.26082 6.63217C2.99965 6.85194 2.67414 6.98092 2.33332 6.99967C2.0239 6.99967 1.72716 6.87676 1.50837 6.65797C1.28957 6.43917 1.16666 6.14243 1.16666 5.83301V4.08301"
+                    stroke-width="1.16667"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke="#FDF0C8"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_8_287">
+                    <rect width="14" height="14" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              FOR BUSINESS OWNERS</span
+            >
+            <h2>Put your shop on the map.</h2>
+            <p>
+              Add your business in a few minutes — name, category, location and
+              photos. Update it anytime from your own dashboard, and read
+              messages from customers in one place.
+            </p>
+          </div>
+          <div class="cta-buttons">
+            <a href="AddYourBusiness/add-business.html" class="btn-yellow"
+              >Add your business</a
+            >
+            <a href="Browse/browse.html" class="btn-outline">Browse listings</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         4. FOOTER
+         ========================================= -->
+    <footer class="main-footer">
+      <div class="footer-columns">
+        <div class="footer-col brand-col">
+          <h3>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_8_303)">
+                <path
+                  d="M13.3333 10.0003C13.3333 11.8413 11.8409 13.3337 9.99999 13.3337C8.15904 13.3337 6.66666 11.8413 6.66666 10.0003C6.66666 8.15938 8.15904 6.66699 9.99999 6.66699C11.8409 6.66699 13.3333 8.15938 13.3333 10.0003Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M10 1.66699V3.33366"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M10 16.667V18.3337"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M4.10834 4.1084L5.28334 5.2834"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M14.7167 14.7168L15.8917 15.8918"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M1.66666 10H3.33332"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M16.6667 10H18.3333"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M5.28334 14.7168L4.10834 15.8918"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+                <path
+                  d="M15.8917 4.1084L14.7167 5.2834"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke="#F6C445"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_8_303">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            TatakLocal
+          </h3>
+          <h6 class="footer-sub">OLONGAPO</h6>
+          <p>
+            A simple directory of local businesses around Olongapo City — built
+            for students, residents and the shop owners next door.
+          </p>
+          <p class="footer-location">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.3333 6.66634C13.3333 9.99501 9.64066 13.4617 8.40066 14.5323C8.28514 14.6192 8.14452 14.6662 7.99999 14.6662C7.85546 14.6662 7.71484 14.6192 7.59932 14.5323C6.35932 13.4617 2.66666 9.99501 2.66666 6.66634C2.66666 5.25185 3.22856 3.8953 4.22875 2.89511C5.22895 1.89491 6.5855 1.33301 7.99999 1.33301C9.41448 1.33301 10.771 1.89491 11.7712 2.89511C12.7714 3.8953 13.3333 5.25185 13.3333 6.66634Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+              <path
+                d="M10 6.66699C10 7.77156 9.10457 8.66699 8 8.66699C6.89543 8.66699 6 7.77156 6 6.66699C6 5.56242 6.89543 4.66699 8 4.66699C9.10457 4.66699 10 5.56242 10 6.66699Z"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#F6C445"
+              />
+            </svg>
+            Olongapo City, Zambales, Philippines
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>CATEGORIES</h4>
+          <a href="Browse/browse.html?cat=food">Food & Beverages</a>
+          <a href="Browse/browse.html?cat=crafts">Handmade & Crafts</a>
+          <a href="Browse/browse.html?cat=fashion">Fashion & Accessories</a>
+          <a href="Browse/browse.html?cat=health">Health & Wellness</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>FOR OWNERS</h4>
+          <a href="AddYourBusiness/add-business.html">Add your business</a>
+          <a href="Dashboard/dashboard.html">Owner dashboard</a>
+          <a href="Browse/browse.html">Browse all listings</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 TatakLokal Olongapo. Made for the city.</p>
+        <p>Listings are added by local business owners.</p>
+      </div>
+    </footer>
+
+    <!-- Page Transition Script -->
+    <script src="Script.js"></script>
+  </body>
+</html>
