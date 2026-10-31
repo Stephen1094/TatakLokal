@@ -34,9 +34,9 @@ main {
 }
 
 .btn-primary {
-background-color: #1B4332;
+background-color: #11683F;
 color: whitesmoke;
-border: 1px solid #1B4332;
+border: 1px solid #11683F;
 margin-bottom: 20px;
 }
 .btn-secondary {
@@ -186,7 +186,7 @@ margin: 0;
 
 .business-card-2 h2 {
 
-       color: #37785d;
+    color: #37785d;
     font-size: 15px;
     margin-bottom: 20px;
 
@@ -247,12 +247,20 @@ margin: 0;
     text-transform: uppercase;
     margin: 0 0 10px;
 }
-
 .location-details p {
     color: #40916C;
     font-size: 12px;
     line-height: 1.5;
     margin: 0 0  12px;
+}
+.location-details button {
+    border: 1px solid #11683F;
+    background-color: #11683F;
+    color: whitesmoke;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 .business-good-to-know {
     background-color: white;

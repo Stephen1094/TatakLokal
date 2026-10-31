@@ -39,13 +39,16 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    
 }
 .nav-links {
+    display: flex;
     margin-left: 520px;
     margin-top: 3px;
     font-size: 15px;
     align-items: center;
+}
+.home-btn {
+    font-weight: bold;
 }
 
 /* Logo */
@@ -91,14 +94,10 @@ header {
     transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
     -webkit-tap-highlight-color: transparent;
 }
-
-.home-btn:hover,
 .browse-btn:hover {
     color: #074c29;
     background-color: rgba(18, 107, 62, 0.08);
 }
-
-.home-btn:active,
 .browse-btn:active {
     transform: scale(0.92);
 }
@@ -107,8 +106,7 @@ header {
 .signin-btn {
     text-decoration: none;
     color: #126B3E;
-    padding: 5x 8px;
-    margin-left: auto;
+    margin-left: 595px;
 }
 .signin-btn:hover {
    color: #074c29;
