@@ -14,7 +14,6 @@ main {
     display: flex;
     gap: 30px;
 }
-
 .business-main-content {
     flex: 2;
 }
@@ -32,19 +31,38 @@ main {
     box-shadow: 0 4px 12px rgba( 0, 0 ,0, 0.15);
 
 }
+<<<<<<< HEAD
 
 .btn-primary {
 background-color: #11683F;
 color: whitesmoke;
 border: 1px solid #11683F;
 margin-bottom: 20px;
+=======
+.business-actions .btn-primary {
+    display: inline-block;
+    background-color: #11683F;
+    color: whitesmoke;
+    border: 1px solid #11683F;
+    text-decoration: none;
+    padding: -5px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+}
+.btn-primary button{ 
+    background-color: #11683F;
+    color:  whitesmoke;
+    border: 1px solid #11683F;
+    margin-bottom: 1px;
+>>>>>>> recovery-tataklokal
 }
 .btn-secondary {
     background-color: whitesmoke;
     color: #3e916e;
     border: 1px solid;
-    border-color: #129a6145;
-    font-weight: bold;
+    border-color: #129a6145;  
 }
 
 .business-actions button {

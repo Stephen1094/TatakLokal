@@ -60,10 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update document title
     const titles = {
-      dashboard: "Dashboard – TatakLokal Olongapo",
-      business: "My Business – TatakLokal Olongapo",
-      messages: "Messages – TatakLokal Olongapo",
-      settings: "Settings – TatakLokal Olongapo",
+      dashboard: "Dashboard | TatakLokal",
+      business: "My Business | TatakLokal",
+      messages: "Messages | TatakLokal",
+      settings: "Settings | TatakLokal",
     };
     document.title = titles[targetView] || "Dashboard – TatakLokal Olongapo";
 

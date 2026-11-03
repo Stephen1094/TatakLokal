@@ -31,11 +31,18 @@ body.page-leaving {
 /* -----------------------------------------
    HEADER & NAVIGATION
    ----------------------------------------- */
-header {
+.circular-browse {
+  width: 150px;
+  height: 150px;
+  border-radius: 80%;
+  object-fit: cover; /* Ensures the logo fits cleanly without distortion */
+  border: 10px solid #cccccc00; /* Optional: adds a border around the circle */
+}
+
+   header {
     display: flex;
-    padding: 15px 8px 7px 20px;
+    padding: 20px 8px 7px 20px;
     background-color: whitesmoke;
-    border-bottom: 1px solid black;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -46,6 +53,9 @@ header {
     margin-top: 3px;
     font-size: 15px;
     align-items: center;
+} 
+.home-btn {
+    font-weight: bold;
 }
 .home-btn {
     font-weight: bold;
@@ -553,7 +563,6 @@ header {
     margin: 0 auto 40px auto;
     gap: 40px;
 }
-
 .brand-col {
     max-width: 320px;
 }
@@ -565,7 +574,7 @@ header {
 }
 
 .footer-sub {
-    margin: 2px 0 10px 0;
+    margin: 2px 0 10px 10px;
     color: #b45309;
     letter-spacing: 1.5px;
     font-size: 10px;
@@ -588,7 +597,6 @@ header {
     letter-spacing: 1px;
     margin-bottom: 16px;
 }
-
 .footer-col a {
     display: block;
     color: #94a3b8;
