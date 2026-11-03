@@ -206,6 +206,7 @@ body.page-leaving {
     max-width: 100%;
     margin: 0;
     padding: 32px 36px 60px;
+    
 }
 
 /* Page Header */
@@ -484,46 +485,7 @@ body.page-leaving {
 }
 
 /* Delivery Pill Box */
-.delivery-toggle-box {
-    background-color: var(--tag-bg);
-    border: 1px solid var(--tag-border);
-    border-radius: 14px;
-    padding: 12px 14px;
-    margin-top: 8px;
-    transition: background-color 0.2s;
-}
 
-.delivery-toggle-box:hover {
-    background-color: #e5f3eb;
-}
-
-.toggle-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.toggle-option input[type="checkbox"] {
-    display: none;
-}
-
-.toggle-option .custom-radio {
-    border-color: #8da496;
-}
-
-.toggle-option input[type="checkbox"]:checked + .custom-radio {
-    border-color: var(--primary);
-    background-color: var(--primary);
-    box-shadow: inset 0 0 0 3px #eef7f2;
-}
-
-.delivery-text {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--primary);
-}
 
 /* --------------------------------------------------------------------------
    Results Section & Cards Grid
@@ -704,26 +666,6 @@ body.page-leaving {
     color: var(--primary);
     letter-spacing: 0.5px;
 }
-
-/* Delivery Badge */
-.badge-delivery {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background-color: var(--tag-bg);
-    color: var(--primary);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: var(--radius-pill);
-    width: fit-content;
-    margin-top: auto;
-}
-
-.badge-delivery svg {
-    color: var(--primary);
-}
-
 /* --------------------------------------------------------------------------
    Responsive Breakpoints
    -------------------------------------------------------------------------- */
